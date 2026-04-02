@@ -1,0 +1,27 @@
+﻿src/pages/BugReportTable.tsx(6,73): error TS6305: Output file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/dist/index.d.ts' has not been built from source file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/src/index.ts'.
+src/pages/BugReportTable.tsx(50,26): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ readonly new: "bg-blue-500 hover:bg-blue-600 text-white"; readonly repeated: "bg-amber-500 hover:bg-amber-600 text-white"; readonly fixed: "bg-green-500 hover:bg-green-600 text-white"; }'.
+src/pages/BugReportTable.tsx(85,40): error TS7006: Parameter 'link' implicitly has an 'any' type.
+src/pages/BugReportTable.tsx(85,46): error TS7006: Parameter 'i' implicitly has an 'any' type.
+src/pages/BugReportTable.tsx(100,37): error TS7006: Parameter 'ui' implicitly has an 'any' type.
+src/pages/BugReportTable.tsx(100,41): error TS7006: Parameter 'i' implicitly has an 'any' type.
+src/pages/BugReportTable.tsx(115,39): error TS7006: Parameter 'form' implicitly has an 'any' type.
+src/pages/BugReportTable.tsx(115,45): error TS7006: Parameter 'i' implicitly has an 'any' type.
+src/pages/BugReportTable.tsx(130,27): error TS7006: Parameter 'ji' implicitly has an 'any' type.
+src/pages/BugReportTable.tsx(130,31): error TS7006: Parameter 'i' implicitly has an 'any' type.
+src/pages/BugReportTable.tsx(147,12): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ High: number; Medium: number; Low: number; }'.
+src/pages/BugReportTable.tsx(147,35): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ High: number; Medium: number; Low: number; }'.
+src/pages/BugReportTable.tsx(277,61): error TS7006: Parameter 'page' implicitly has an 'any' type.
+src/pages/ReportExporter.tsx(12,33): error TS6305: Output file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/dist/index.d.ts' has not been built from source file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/src/index.ts'.
+src/pages/Results.tsx(8,57): error TS6305: Output file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/dist/index.d.ts' has not been built from source file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/src/index.ts'.
+src/pages/Results.tsx(89,32): error TS7006: Parameter 'b' implicitly has an 'any' type.
+src/pages/ScanProgress.tsx(5,49): error TS6305: Output file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/dist/index.d.ts' has not been built from source file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/src/index.ts'.
+src/pages/ScanProgress.tsx(18,25): error TS7006: Parameter 'query' implicitly has an 'any' type.
+src/pages/ScanProgress.tsx(122,74): error TS7006: Parameter 'file' implicitly has an 'any' type.
+src/pages/ScanProgress.tsx(122,80): error TS7006: Parameter 'i' implicitly has an 'any' type.
+src/pages/ScanProgress.tsx(173,31): error TS7006: Parameter 'step' implicitly has an 'any' type.
+src/pages/ScanProgress.tsx(173,37): error TS7006: Parameter 'index' implicitly has an 'any' type.
+src/pages/ScreenshotGallery.tsx(6,52): error TS6305: Output file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/dist/index.d.ts' has not been built from source file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/src/index.ts'.
+src/pages/SummaryCards.tsx(2,34): error TS6305: Output file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/dist/index.d.ts' has not been built from source file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/src/index.ts'.
+src/pages/UrlInput.tsx(9,30): error TS6305: Output file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/dist/index.d.ts' has not been built from source file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/src/index.ts'.
+src/pages/UrlInput.tsx(10,34): error TS6305: Output file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/dist/index.d.ts' has not been built from source file 'C:/Users/Om Kiran Chavan/OneDrive/Desktop/Auto-QA-Reporter-main/Auto-QA-Reporter-main/lib/api-client-react/src/index.ts'.
+src/pages/UrlInput.tsx(104,19): error TS7006: Parameter 'data' implicitly has an 'any' type.

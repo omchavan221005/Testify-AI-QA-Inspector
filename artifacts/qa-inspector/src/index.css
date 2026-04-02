@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Modern Dark Palette */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-warning: hsl(var(--warning));
+  --color-warning-foreground: hsl(var(--warning-foreground));
+  --color-success: hsl(var(--success));
+  --color-success-foreground: hsl(var(--success-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  /* Subtle radius */
+  --radius: 6px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+:root {
+  --background: 240 10% 4%; /* #0a0a0f */
+  --foreground: 240 5% 90%; 
+  
+  --primary: 182 100% 50%; /* Electric Cyan #00f5ff */
+  --primary-foreground: 240 10% 4%;
+  
+  --secondary: 240 5% 15%; 
+  --secondary-foreground: 240 5% 90%;
+  
+  --muted: 240 5% 10%;
+  --muted-foreground: 240 5% 60%;
+  
+  --accent: 182 100% 50%;
+  --accent-foreground: 240 10% 4%;
+  
+  --destructive: 0 84% 60%; 
+  --destructive-foreground: 0 0% 100%;
+  
+  --warning: 38 92% 50%; 
+  --warning-foreground: 240 10% 4%;
+  
+  --success: 142 71% 45%; 
+  --success-foreground: 240 10% 4%;
+  
+  --border: 240 5% 20%;
+  --input: 240 5% 12%;
+  --ring: 182 100% 50%;
+  
+  --card: 240 6% 6%;
+  --card-foreground: 240 5% 90%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden relative;
+  }
+}
+
+@layer utilities {
+  .neon-text {
+    text-shadow: 0 0 5px rgba(0, 245, 255, 0.5), 0 0 10px rgba(0, 245, 255, 0.3);
+  }
+  .neon-glow {
+    box-shadow: 0 0 15px rgba(0, 245, 255, 0.2), 0 0 30px rgba(0, 245, 255, 0.1);
+  }
+  .neon-border {
+    border-color: rgba(0, 245, 255, 0.5);
+    box-shadow: inset 0 0 10px rgba(0, 245, 255, 0.1), 0 0 10px rgba(0, 245, 255, 0.1);
+  }
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(0, 245, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 245, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+}
+
+@layer components {
+  .cyber-button {
+    @apply relative overflow-hidden transition-all duration-300 active:scale-95;
+  }
+  .cyber-button:hover {
+    @apply border-primary bg-primary/10;
+    box-shadow: 0 0 15px rgba(0, 245, 255, 0.2), 0 0 30px rgba(0, 245, 255, 0.1);
+    text-shadow: 0 0 8px rgba(0, 245, 255, 0.8);
+  }
+  .cyber-button::after {
+    content: '';
+    @apply absolute inset-0 bg-white/10 translate-x-[-100%] transition-transform duration-300;
+  }
+  .cyber-button:hover::after {
+    @apply translate-x-[100%];
+  }
+
+  .cyber-button-danger {
+    @apply relative overflow-hidden transition-all duration-300 active:scale-95 border-rose-500/30 text-rose-500/50;
+  }
+  .cyber-button-danger:hover {
+    @apply border-rose-500 bg-rose-500/10 text-rose-500;
+    box-shadow: 0 0 15px rgba(244, 63, 94, 0.3), 0 0 30px rgba(244, 63, 94, 0.1);
+    text-shadow: 0 0 8px rgba(244, 63, 94, 0.8);
+  }
+  .cyber-button-danger::after {
+    content: '';
+    @apply absolute inset-0 bg-white/5 translate-x-[-100%] transition-transform duration-300;
+  }
+  .cyber-button-danger:hover::after {
+    @apply translate-x-[100%];
+  }
+
+  .cyber-card {
+    @apply transition-all duration-300 border border-white/5 bg-white/[0.02];
+  }
+  .cyber-card:hover {
+    @apply border-primary/30 bg-white/[0.04] translate-y-[-2px];
+    box-shadow: 0 0 15px rgba(0, 245, 255, 0.2), 0 0 30px rgba(0, 245, 255, 0.1);
+  }
+}
+
+@layer utilities {
+  .scanline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 245, 255, 0.05) 50%,
+      transparent
+    );
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 9999;
+    animation: scanline 8s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { filter: drop-shadow(0 0 5px rgba(0, 245, 255, 0.5)); }
+  50% { filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.8)); }
+}
+
+@layer utilities {
+  .animate-scan-vertical {
+    animation: scan-vertical 3s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes scan-vertical {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+

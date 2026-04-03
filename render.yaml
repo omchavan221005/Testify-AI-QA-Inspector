@@ -2,6 +2,7 @@ services:
   # API Server (Backend Web Service)
   - type: web
     name: testifyai-api
+    plan: free
     env: node
     region: ohio
     buildCommand: npm i -g pnpm && pnpm install && pnpm --filter @workspace/api-server run build && npx playwright install chromium

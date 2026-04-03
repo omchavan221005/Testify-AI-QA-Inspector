@@ -24,7 +24,6 @@ services:
   - type: web
     name: testifyai-ui
     env: static
-    region: ohio
     buildCommand: npm i -g pnpm && pnpm install && pnpm --filter @workspace/qa-inspector run build
     staticPublishPath: ./artifacts/qa-inspector/dist/public
     envVars:

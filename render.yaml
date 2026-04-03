@@ -1,0 +1,40 @@
+services:
+  # API Server (Backend Web Service)
+  - type: web
+    name: testifyai-api
+    env: node
+    region: ohio
+    buildCommand: npm i -g pnpm && pnpm install && pnpm --filter @workspace/api-server run build && npx playwright install chromium
+    startCommand: npm i -g pnpm && pnpm --filter @workspace/api-server run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: PORT
+        value: "10000"
+
+  # QA Inspector (Frontend Static Site)
+  - type: web
+    name: testifyai-ui
+    env: static
+    region: ohio
+    buildCommand: npm i -g pnpm && pnpm install && pnpm --filter @workspace/qa-inspector run build
+    staticPublishPath: ./artifacts/qa-inspector/dist/public
+    envVars:
+      - key: VITE_API_URL
+        sync: false # Important: Set this in Render Dashboard to your API URL + /api (e.g. https://testifyai-api.onrender.com/api)
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_ANON_KEY
+        sync: false
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
